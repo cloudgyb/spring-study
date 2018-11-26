@@ -1,17 +1,45 @@
 package com.gyb.spring.springboot01.conf;
 
 import com.gyb.spring.springboot01.web.TestInterceptor;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.gyb.spring.springboot01.web.filter.TestFilter;
+import com.gyb.spring.springboot01.web.filter.TestFilter2;
+import com.gyb.spring.springboot01.web.servlet.TestServlet;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
+import javax.servlet.Filter;
+import javax.servlet.Servlet;
+
 @Configuration
 public class WebConfig extends WebMvcConfigurationSupport {
-    @Autowired
-    private TestInterceptor testInterceptor;
+
     @Override
     protected void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(testInterceptor);
+        registry.addInterceptor(new TestInterceptor());
+    }
+
+    @Bean
+    public FilterRegistrationBean addFilter(){
+        FilterRegistrationBean<Filter> registrationBean = new FilterRegistrationBean<>();
+        registrationBean.setFilter(new TestFilter());
+        return registrationBean;
+    }
+
+    @Bean
+    public FilterRegistrationBean addFilter1(){
+        FilterRegistrationBean<Filter> registrationBean = new FilterRegistrationBean<>();
+        registrationBean.setFilter(new TestFilter2());
+        return registrationBean;
+    }
+    @Bean
+    public ServletRegistrationBean addServlet(){
+        ServletRegistrationBean<Servlet> registrationBean = new ServletRegistrationBean<>();
+        registrationBean.setServlet(new TestServlet());
+        registrationBean.addUrlMappings("/servlet");
+        return registrationBean;
     }
 }
