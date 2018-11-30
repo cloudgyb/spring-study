@@ -30,6 +30,7 @@
 
     <modules>
         <module>springboot01</module>
+        <module>spring-security01</module>
     </modules>
 
 </project>
