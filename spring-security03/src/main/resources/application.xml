@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+                    http://www.springframework.org/schema/beans/spring-beans.xsd
+                    http://www.springframework.org/schema/security
+                    http://www.springframework.org/schema/security/spring-security.xsd">
+
+    <http security="none" pattern="/favicon.ico" />
+    <http>
+        <intercept-url pattern="/**" access="hasRole('USER')"/>
+        <form-login />
+    </http>
+    <authentication-manager>
+        <!--<authentication-provider>
+            <user-service>
+                <user name="user" authorities="ROLE_USER" password="{noop}qazwsx" />
+            </user-service>
+        </authentication-provider>-->
+        <authentication-provider user-service-ref="myUserDetailsService">
+            <password-encoder ref="passwordEncoder"/>
+        </authentication-provider>
+    </authentication-manager>
+
+    <beans:bean id="passwordEncoder" class="org.springframework.security.crypto.password.NoOpPasswordEncoder"/>
+
+    <beans:bean id="myUserDetailsService" class="org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl" >
+        <beans:property name="dataSource" ref="dataSource" />
+    </beans:bean>
+
+    <beans:bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
+        <beans:property name="username" value="root"/>
+        <beans:property name="password" value="123456"/>
+        <beans:property name="url" value="jdbc:mysql://localhost:3306/test"/>
+        <beans:property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+    </beans:bean>
+
+</beans:beans>

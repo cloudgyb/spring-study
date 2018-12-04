@@ -31,6 +31,8 @@
     <modules>
         <module>springboot01</module>
         <module>spring-security01</module>
+        <module>spring-security02</module>
+        <module>spring-security03</module>
     </modules>
 
 </project>

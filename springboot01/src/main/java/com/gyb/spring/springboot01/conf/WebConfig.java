@@ -39,7 +39,7 @@ public class WebConfig extends WebMvcConfigurationSupport {
     public ServletRegistrationBean addServlet(){
         ServletRegistrationBean<Servlet> registrationBean = new ServletRegistrationBean<>();
         registrationBean.setServlet(new TestServlet());
-        registrationBean.addUrlMappings("/servlet");
+        registrationBean.addUrlMappings("/controller");
         return registrationBean;
     }
 }
