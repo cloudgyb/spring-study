@@ -33,6 +33,7 @@
         <module>spring-security01</module>
         <module>spring-security02</module>
         <module>spring-security03</module>
+        <module>spring-mongodb01</module>
     </modules>
 
 </project>
