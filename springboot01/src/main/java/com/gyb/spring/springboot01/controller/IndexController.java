@@ -2,16 +2,16 @@ package com.gyb.spring.springboot01.controller;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 public class IndexController {
-    @GetMapping(value = "/",produces = "application/json")
+    @GetMapping(value = "/")
     public  String index(){
         Log log = LogFactory.getLog(IndexController.class);
         log.warn("warning...........");
-        return "项目已启动！^-^---";
+        return "index";
     }
 
 }

@@ -5,3 +5,7 @@ server:
 
 logging:
   path: /var/log/spring-study
+
+spring:
+  mvc:
+    static-path-pattern: /static/**
