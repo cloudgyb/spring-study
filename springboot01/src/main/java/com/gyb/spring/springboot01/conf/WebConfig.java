@@ -9,7 +9,10 @@ import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
+import org.springframework.web.servlet.view.InternalResourceView;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import javax.servlet.Filter;
 import javax.servlet.Servlet;
@@ -21,6 +24,11 @@ public class WebConfig extends WebMvcConfigurationSupport {
     protected void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new TestInterceptor());
     }
+
+    /*@Override
+    protected void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/static/**","classpath:/static/");
+    }*/
 
     @Bean
     public FilterRegistrationBean addFilter(){
@@ -41,5 +49,11 @@ public class WebConfig extends WebMvcConfigurationSupport {
         registrationBean.setServlet(new TestServlet());
         registrationBean.addUrlMappings("/controller");
         return registrationBean;
+    }
+
+    @Bean
+    public InternalResourceViewResolver addResourceViewResolver(){
+        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+        return  resolver;
     }
 }
