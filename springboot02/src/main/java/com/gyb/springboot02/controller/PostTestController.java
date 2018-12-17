@@ -9,6 +9,11 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api")
 public class PostTestController {
+    @GetMapping("/getTest")
+    public Object testGetPrarms(@RequestParam String param){
+        System.out.println(param);
+        return "{\"mess\":\"ok!\"}";
+    }
 
     @PostMapping("/postTest")
     public Object testGetParams(HttpServletRequest req,@RequestParam String p2){
