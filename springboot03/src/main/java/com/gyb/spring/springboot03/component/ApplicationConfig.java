@@ -1,4 +1,4 @@
-package com.gyb.springboot03.springboot03.component;
+package com.gyb.spring.springboot03.component;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

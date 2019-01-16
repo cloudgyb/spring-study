@@ -1,4 +1,4 @@
-package com.gyb.springboot03.springboot03.component;
+package com.gyb.spring.springboot03.component;
 
 import org.springframework.core.env.PropertySource;
 import org.springframework.core.io.support.EncodedResource;

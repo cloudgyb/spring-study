@@ -1,16 +1,14 @@
-package com.gyb.springboot03.springboot03;
+package com.gyb.spring.springboot03;
 
-import com.gyb.springboot03.springboot03.component.MyBean;
-import com.gyb.springboot03.springboot03.component.MyValuePropertySourceFactory;
+import com.gyb.spring.springboot03.component.MyValuePropertySourceFactory;
+import com.gyb.spring.springboot03.component.MyBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

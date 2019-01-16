@@ -1,4 +1,4 @@
-package com.gyb.springboot03.springboot03.component;
+package com.gyb.spring.springboot03.component;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
@@ -15,6 +15,5 @@ public class MyRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.out.println("myRunning run......");
-        System.out.println(new ApplicationConfig().toString());
     }
 }

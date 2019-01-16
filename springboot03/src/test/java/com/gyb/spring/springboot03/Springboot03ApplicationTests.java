@@ -1,4 +1,4 @@
-package com.gyb.springboot03.springboot03;
+package com.gyb.spring.springboot03;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
