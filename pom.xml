@@ -37,6 +37,7 @@
         <module>springboot02</module>
         <module>springboot03</module>
         <module>springboot04</module>
+        <module>springboot05</module>
     </modules>
 
 </project>
