@@ -1,6 +1,6 @@
-package com.gyb.spring.springboot05;
+package com.gyb.spring.springsession01;
 
-import com.gyb.spring.springboot05.service.UserService;
+import com.gyb.spring.springsession01.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

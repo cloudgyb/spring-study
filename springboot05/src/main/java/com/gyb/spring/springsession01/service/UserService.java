@@ -1,7 +1,7 @@
-package com.gyb.spring.springboot05.service;
+package com.gyb.spring.springsession01.service;
 
-import com.gyb.spring.springboot05.dao.SOtherDao;
-import com.gyb.spring.springboot05.dao.SUserDao;
+import com.gyb.spring.springsession01.dao.SOtherDao;
+import com.gyb.spring.springsession01.dao.SUserDao;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

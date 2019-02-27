@@ -1,4 +1,4 @@
-package com.gyb.spring.springboot05.config;
+package com.gyb.spring.springsession01.config;
 
 import lombok.Getter;
 import lombok.Setter;

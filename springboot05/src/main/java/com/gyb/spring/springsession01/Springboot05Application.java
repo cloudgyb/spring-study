@@ -1,8 +1,7 @@
-package com.gyb.spring.springboot05;
+package com.gyb.spring.springsession01;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication

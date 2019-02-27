@@ -1,4 +1,4 @@
-package com.gyb.spring.springboot05.config;
+package com.gyb.spring.springsession01.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;

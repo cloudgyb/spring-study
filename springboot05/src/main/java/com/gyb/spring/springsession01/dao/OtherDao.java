@@ -1,4 +1,4 @@
-package com.gyb.spring.springboot05.dao;
+package com.gyb.spring.springsession01.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -15,19 +15,19 @@ import java.sql.SQLException;
 
 @Repository
 @Scope("prototype")
-public class UserDao {
+public class OtherDao {
     private Connection conn;
 
     @Autowired
-    public UserDao(Connection conn) {
-        this.conn = conn;
+    public OtherDao(Connection connection) {
+        this.conn = connection;
     }
 
     public int delete(int id){
         PreparedStatement ps = null;
         int i = 0;
         try {
-            ps = conn.prepareStatement("delete from t_user where id=?");
+            ps = conn.prepareStatement("delete from t_other where id=?");
             ps.setInt(1,id);
             i = ps.executeUpdate();
         }catch (SQLException e){
