@@ -39,6 +39,8 @@
         <module>springboot04</module>
         <module>springboot05</module>
         <module>spring-session01</module>
+        <module>spring-session02</module>
+        <module>spring-activemq01</module>
     </modules>
 
 </project>

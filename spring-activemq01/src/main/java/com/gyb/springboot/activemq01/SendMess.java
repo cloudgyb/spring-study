@@ -14,6 +14,6 @@ public class SendMess {
     private JmsMessagingTemplate template;
 
     public void sendMess(){
-        template
+        //template
     }
 }
