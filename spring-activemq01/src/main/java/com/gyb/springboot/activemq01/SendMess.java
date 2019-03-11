@@ -13,7 +13,8 @@ public class SendMess {
     @Autowired
     private JmsMessagingTemplate template;
 
-    public void sendMess(){
-        //template
+    public void sendMess(String mess){
+        template
+                .convertAndSend("my_mess",mess);
     }
 }
