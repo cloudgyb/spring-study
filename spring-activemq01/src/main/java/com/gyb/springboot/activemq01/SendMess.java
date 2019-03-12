@@ -5,6 +5,7 @@ import org.springframework.jms.core.JmsMessagingTemplate;
 import org.springframework.stereotype.Component;
 
 /**
+ * 消息生产者，通过sendMess方法将消息发送到ActiveMQ队列
  * @author gengyuanbo
  * 2019/03/09
  */
