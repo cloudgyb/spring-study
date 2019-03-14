@@ -41,6 +41,8 @@
         <module>spring-session01</module>
         <module>spring-session02</module>
         <module>spring-activemq01</module>
+        <module>spring-activemq02</module>
+        <module>spring-email</module>
     </modules>
 
 </project>
