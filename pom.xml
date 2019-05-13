@@ -43,6 +43,7 @@
         <module>spring-activemq01</module>
         <module>spring-activemq02</module>
         <module>spring-email</module>
+        <module>spring-cache01</module>
     </modules>
 
 </project>
