@@ -45,6 +45,7 @@
         <module>spring-email</module>
         <module>spring01</module>
         <module>spring-cache01</module>
+        <module>spring-websocket</module>
     </modules>
 
 </project>
